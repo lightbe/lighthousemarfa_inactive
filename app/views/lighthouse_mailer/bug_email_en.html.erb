@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /></head>
+  <body>
+    <p><%= @contact_form["name"] %>, your bug report below has been received by the staff of The LightHouse Unlimited.</p>
+    <p><span style="font-weight: bold;">Location: </span><%= @contact_form["location"] %></p>
+		<% if @contact_form["phone"].present? %>
+			<p><span style="font-weight: bold;">Phone   : </span><%= @contact_form["phone"] %></p>
+		<% end %>
+		<% if @contact_form["ordernum"].present? %>
+			<p><span style="font-weight: bold;">Order # : </span><%= @contact_form["ordernum"] %></p>
+		<% end %>
+    <p style="font-weight: bold; font-style: italic;"><%= @contact_form["message"] %></p>
+    <p>Thanks so much for communicating with the staff of The LightHouse Unlimited about the problems you are having with the website.<br/></p>
+    <p>Your information will be immediately investigated and resolved as soon as possible.<br></p>
+    <p>Sincerely,</p>
+    <p>The LightHouse Unlimited</p>
+  </body>
+</html>

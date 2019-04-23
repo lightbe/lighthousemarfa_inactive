@@ -1,0 +1,16 @@
+<div class="thumbnail">
+	<div class="store-caption">
+		<p><%= image_tag("storehealing.jpg", class: "img-fluid", alt: "#{t :store_book_pdf_healing}") %></p>
+		<p align="right"><%= "45 #{t :pages}" %></p>
+		<div class="row">
+			<div class="row-col-img-padding">
+				<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4" align="center"><%= link_to "#{t :free_sample}", "https://s3.amazonaws.com/lightbe/Healing_SAMPLE.pdf", target: "_blank" %></div>
+				<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4" align="center">
+					<%= link_to "#{t :buy} #{t :store_book_pdf_healing_price}", "https://transactions.sendowl.com/products/77676746/59C5CBC3/add_to_cart", rel: "nofollow" %>
+					<script type="text/javascript" src="https://transactions.sendowl.com/assets/sendowl.js" ></script>
+				</div>
+				<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4" align="center"><%= render 'pages/view_cart' %></div>
+			</div>
+		</div>
+	</div>
+</div>

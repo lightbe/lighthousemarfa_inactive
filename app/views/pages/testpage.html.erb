@@ -1,0 +1,203 @@
+<div id="overview" class="text-center">	
+  <div class="container">
+    <div class="section-title center">			
+      <h2><%= "#{@page_title_view}" %></h2>
+      <hr>
+		  <p><%= t('overview_text_html') %></p>
+    </div>
+	  <div class="row">
+	    <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8" align="center">
+				<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+				  <ul class="nav nav-pills flex-column" id="whatToBuyPills">
+				    <li class="active"><a href="#clothing" aria-controls="clothing" data-toggle="pill"><%= "#{t :overview01}" %></a></li>
+				    <li><a href="#accessories" aria-controls="accessories" data-toggle="pill"><%= "#{t :overview02}" %></a></li>
+				    <li><a href="#inspiration" aria-controls="inspiration" data-toggle="pill"><%= "#{t :overview03}" %></a></li>
+				    <li><a href="#decorative" aria-controls="decorative" data-toggle="pill"><%= "#{t :overview04}" %></a></li>
+				    <li><a href="#coffee" aria-controls="coffee" data-toggle="pill"><%= "#{t :overview05}" %></a></li>
+				  </ul>
+				</div>
+				<div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+				  <div class="tab-content">
+				    <div class="tab-pane active" id="clothing" align="center">
+				      <div id="carousel-clothing" class="carousel slide", data-ride="carousel">
+			          <!-- Indicators -->
+			          <ol class="carousel-indicators hidden-xs">
+			            <li data-target="#carousel-clothing" data-slide-to="0" class="active"></li>
+			            <li data-target="#carousel-clothing" data-slide-to="1"></li>
+			            <li data-target="#carousel-clothing" data-slide-to="2"></li>
+			            <li data-target="#carousel-clothing" data-slide-to="3"></li>
+			            <li data-target="#carousel-clothing" data-slide-to="4"></li>
+			            <li data-target="#carousel-clothing" data-slide-to="5"></li>
+			          </ol>
+
+			          <!-- Wrapper for slides -->
+			          <div class="carousel-inner">
+			            <div class="item active"><%= image_tag("carousel/1.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/2.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/3.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/4.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/5.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/6.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			          </div>
+
+			          <!-- Controls -->
+			          <a class="left carousel-control" href="#carousel-clothing" data-slide="prev">
+									<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+									<span class="sr-only"><%= "#{t :previous} " %></span>
+								</a>
+			          <a class="right carousel-control" href="#carousel-clothing" data-slide="next">
+									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+									<span class="sr-only"><%= "#{t :next} " %></span>
+								</a>
+				      </div>
+				    </div>
+				    <div class="tab-pane" id="accessories" align="center">
+				      <div id="carousel-accessories" class="carousel slide", data-ride="carousel">
+			          <!-- Indicators -->
+			          <ol class="carousel-indicators hidden-xs">
+			            <li data-target="#carousel-accessories" data-slide-to="0" class="active"></li>
+			            <li data-target="#carousel-accessories" data-slide-to="1"></li>
+			            <li data-target="#carousel-accessories" data-slide-to="2"></li>
+			            <li data-target="#carousel-accessories" data-slide-to="3"></li>
+			            <li data-target="#carousel-accessories" data-slide-to="4"></li>
+			            <li data-target="#carousel-accessories" data-slide-to="5"></li>
+			            <li data-target="#carousel-accessories" data-slide-to="6"></li>
+			          </ol>
+
+			          <!-- Wrapper for slides -->
+			          <div class="carousel-inner">
+			            <div class="item active"><%= image_tag("carousel/7.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/8.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/9.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/10.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/11.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/12.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/13.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			          </div>
+
+			          <!-- Controls -->
+			          <a class="left carousel-control" href="#carousel-accessories" data-slide="prev">
+									<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+									<span class="sr-only"><%= "#{t :previous} " %></span>
+								</a>
+			          <a class="right carousel-control" href="#carousel-accessories" data-slide="next">
+									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+									<span class="sr-only"><%= "#{t :next} " %></span>
+								</a>
+				      </div>
+				    </div>
+				    <div class="tab-pane" id="inspiration" align="center">
+				      <div id="carousel-inspiration" class="carousel slide", data-ride="carousel">
+			          <!-- Indicators -->
+			          <ol class="carousel-indicators hidden-xs">
+			            <li data-target="#carousel-inspiration" data-slide-to="0" class="active"></li>
+			            <li data-target="#carousel-inspiration" data-slide-to="1"></li>
+			            <li data-target="#carousel-inspiration" data-slide-to="2"></li>
+			            <li data-target="#carousel-inspiration" data-slide-to="3"></li>
+			            <li data-target="#carousel-inspiration" data-slide-to="4"></li>
+			            <li data-target="#carousel-inspiration" data-slide-to="5"></li>
+			          </ol>
+
+			          <!-- Wrapper for slides -->
+			          <div class="carousel-inner">
+			            <div class="item active"><%= image_tag("carousel/14.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/15.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/16.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/17.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/18.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/19.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			          </div>
+
+			          <!-- Controls -->
+			          <a class="left carousel-control" href="#carousel-inspiration" data-slide="prev">
+									<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+									<span class="sr-only"><%= "#{t :previous} " %></span>
+								</a>
+			          <a class="right carousel-control" href="#carousel-inspiration" data-slide="next">
+									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+									<span class="sr-only"><%= "#{t :next} " %></span>
+								</a>
+				      </div>  	
+				    </div>
+				    <div class="tab-pane" id="decorative" align="center">
+				      <div id="carousel-decorative" class="carousel slide", data-ride="carousel">
+			          <!-- Indicators -->
+			          <ol class="carousel-indicators hidden-xs">
+			            <li data-target="#carousel-decorative" data-slide-to="0" class="active"></li>
+			            <li data-target="#carousel-decorative" data-slide-to="1"></li>
+			            <li data-target="#carousel-decorative" data-slide-to="2"></li>
+			            <li data-target="#carousel-decorative" data-slide-to="3"></li>
+			            <li data-target="#carousel-decorative" data-slide-to="4"></li>
+			            <li data-target="#carousel-decorative" data-slide-to="5"></li>
+			            <li data-target="#carousel-decorative" data-slide-to="6"></li>
+			          </ol>
+
+			          <!-- Wrapper for slides -->
+			          <div class="carousel-inner">
+			            <div class="item active"><%= image_tag("carousel/20.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/21.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/22.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/23.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/24.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/25.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/26.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			          </div>
+
+			          <!-- Controls -->
+			          <a class="left carousel-control" href="#carousel-decorative" data-slide="prev">
+									<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+									<span class="sr-only"><%= "#{t :previous} " %></span>
+								</a>
+			          <a class="right carousel-control" href="#carousel-decorative" data-slide="next">
+									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+									<span class="sr-only"><%= "#{t :next} " %></span>
+								</a>
+				      </div>	    	
+				    </div>
+				    <div class="tab-pane" id="coffee" align="center">
+				      <div id="carousel-coffee" class="carousel slide", data-ride="carousel">
+			          <!-- Indicators -->
+			          <ol class="carousel-indicators hidden-xs">
+			            <li data-target="#carousel-coffee" data-slide-to="0" class="active"></li>
+			            <li data-target="#carousel-coffee" data-slide-to="1"></li>
+			            <li data-target="#carousel-coffee" data-slide-to="2"></li>
+			            <li data-target="#carousel-coffee" data-slide-to="3"></li>
+			            <li data-target="#carousel-coffee" data-slide-to="4"></li>
+			            <li data-target="#carousel-coffee" data-slide-to="5"></li>
+			            <li data-target="#carousel-coffee" data-slide-to="6"></li>
+			            <li data-target="#carousel-coffee" data-slide-to="7"></li>
+			            <li data-target="#carousel-coffee" data-slide-to="8"></li>
+			            <li data-target="#carousel-coffee" data-slide-to="9"></li>
+			          </ol>
+
+			          <!-- Wrapper for slides -->
+			          <div class="carousel-inner">
+			            <div class="item active"><%= image_tag("carousel/27.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/28.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/29.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/30.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/31.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/32.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/33.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/34.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/35.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			            <div class="item"><%= image_tag("carousel/36.jpg", class: "img-fluid", alt: "#{t :meta_keywords_overview}") %></div>
+			          </div>
+
+			          <!-- Controls -->
+			          <a class="left carousel-control" href="#carousel-coffee" data-slide="prev">
+									<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+									<span class="sr-only"><%= "#{t :previous} " %></span>
+								</a>
+			          <a class="right carousel-control" href="#carousel-coffee" data-slide="next">
+									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+									<span class="sr-only"><%= "#{t :next} " %></span>
+								</a>
+				      </div>   	
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,36 @@
+<!-- Navigation -->
+<nav class="navbar fixed-top navbar-expand-md navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fas fa-bars"></i> </button>
+			<%= link_to " #{t :store_name}", locale_root_path, class: "navbar-brand" %>
+		</div>
+  
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-main-collapse">
+
+      <ul class="navbar-nav">
+				<li class="text-fb-link"><%= link_to "https://www.facebook.com/lighthouseunlimited/", target: "_blank" do %><i class="fab fa-facebook-f"></i><% end %></li>
+				<% if Rails.env.development? %>
+	        <li class="nav-item nav-link"><%= link_to "#{t :english}", locale: "en" %></li>
+	        <li class="nav-item nav-link"><%= link_to "#{t :spanish}", locale: "es" %></li>
+				<% end %>
+      </ul>
+ 
+			<ul class="navbar-nav ml-auto">
+      <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+      	<li class="hidden"> <a href="#page-top"></a> </li>
+        <li class="nav-item nav-link"><%= link_to "#{t :link_overview}", overview_path %></li>
+        <!-- <li class="nav-item nav-link"><%= link_to "#{t :link_store}", "http://store.lighthousemarfa.com", target: "_blank" %></li> -->
+        <li class="nav-item nav-link"><%= link_to "#{t :link_contact}", contact_path %></li>
+        <li class="nav-item nav-link"><%= link_to "#{t :link_marfa}", marfa_path %></li>
+        <% if Rails.env.development? %><li class="nav-item nav-link"><%= link_to "#{t :link_testpage}", testpage_path %></li><% end %>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+  <% flash.each do |key, value| %>
+    <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+  <% end %>
+  <!-- /.container --> 
+</nav>

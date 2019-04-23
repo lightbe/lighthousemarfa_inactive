@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<!-- Global Site Tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107917100-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-107917100-1');
+		</script>
+    <meta charset="utf-8">
+		<meta name="google-site-verification" content="gSDl10OgjQK-uTSbRWpu2NS-qoTpu6hLtvLrjRWWNf0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="wot-verification" content="9145e5342dd6b1976fec"/>
+		<%= display_meta_tags site: "#{t :meta_site}", title: "#{t :meta_title}", description: "#{t :meta_desc}", keywords: "#{t :meta_keywords}", og: { type: "website", site_name: :site, title: :full_title, description: :description, url: "https://www.lighthousemarfa.com/", image: "https://s3.amazonaws.com/nbcbigbend/headerlighthouselandscape.jpg", locale: "en", "locale:alternate": "es" }, fb: { pages: "601169346939392" } %>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= csrf_meta_tags %>
+  	<%= favicon_link_tag "/favicon.ico" %>
+    <%= render 'layouts/shim' %> 
+  </head>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <div class="container-fluid"> 
+		<!-- Don't display the navbar for home, display flash message at the top of the page -->
+			<% if params[:action] == "home" %>
+	      <% flash.each do |key, value| %>
+	        <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+	      <% end %>
+			<% else %>
+		<!-- Display flash message below the navbar -->
+				<%= render "layouts/navbar" %>
+			<% end %>
+      <%= yield %>
+		<!-- Don't display the footer for home -->
+			<% if params[:action] == "home" %> 
+			<% else %>
+				<%= render "layouts/footer" %>
+			<% end %>
+    </div>
+    <%= javascript_include_tag "application" %>
+    <%= debug(params) if Rails.env.development? %>
+  </body>
+</html>

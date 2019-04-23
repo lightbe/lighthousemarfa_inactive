@@ -1,0 +1,12 @@
+<div id="intro">	
+	<% if Rails.env.development? %>
+		<p class="locale-line" align="center"><span class="english-link"><%= link_to_unless_current "#{t :english}", locale: "en" %></span><%= link_to_unless_current "#{t :spanish}", locale: "es" %></p>
+	<% else %>
+		<p class="blank-line" align="center">This text will not be seen in production</p>
+	<% end %>
+	<div id="elements">
+		<%= link_to "#{t :button_overview}", overview_path, class: "btn btn-default" %>
+		<!-- <%= link_to "#{t :button_store}", "http://store.lighthousemarfa.com", target: "_blank", class: "btn btn-default" %> -->
+		<%= render "layouts/footer" %>
+	</div>
+</div>

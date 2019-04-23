@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /></head>
+  <body>
+    <p><%= "#{@contact_form["name"]} te ha enviado #{@contact_form["email_type"]}" %></p>
+    <p><span style="font-weight: bold;">Ubicación: </span><%= @contact_form["location"] %></p>
+    <p><span style="font-weight: bold;">Email   : </span><%= @contact_form["email"] %></p>
+		<% if @contact_form["phone"].present? %>
+			<p><span style="font-weight: bold;">Teléfono  : </span><%= @contact_form["phone"] %></p>
+		<% end %>
+		<% if @contact_form["ordernum"].present? %>
+			<p><span style="font-weight: bold;">Orden #   : </span><%= @contact_form["ordernum"] %></p>
+		<% end %>
+    <p style="font-weight: bold; font-style: italic;"><%= @contact_form["message"] %></p>
+  </body>
+</html>

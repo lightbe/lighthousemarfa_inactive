@@ -1,0 +1,8 @@
+<div id="footer">
+	<% if params[:action] == "home" %>
+	  <span class="home-page"><%= "©#{Time.now.strftime("%Y")} The Lighthouse Unlimited, Inc. #{t :copyright_all_rights} - #{t :lightbe_credit} " %><span class="font-weight-bold"><%= link_to "LightBe Corp", "https://www.lightbe.com/", target: "_blank" %></span></span>
+	<% else %>
+		<%= link_to "#{t :link_terms}", terms_path %><br>
+	  <%= "©#{Time.now.strftime("%Y")} The Lighthouse Unlimited, Inc. #{t :copyright_all_rights} - #{t :lightbe_credit} " %><span class="font-weight-bold"><%= link_to "LightBe Corp", "https://www.lightbe.com/", target: "_blank" %></span>
+	<% end %>
+</div>

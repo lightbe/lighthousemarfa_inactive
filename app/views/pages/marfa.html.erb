@@ -1,0 +1,85 @@
+<div id="marfa" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2><%= "#{@page_title_view}" %></h2>
+      <hr>
+    </div>
+		<div class="row">
+		  <div class="col-12 col-sm-4 offset-sm-2 col-md-4 offset-sm-2 col-lg-4 offset-lg-2 col-xl-4 offset-xl-2" align="center" id="font-weight-bold">
+			<%= link_to "#{t :map_marfa_head}", "https://www.mapquest.com/search/result?slug=%2Fus%2Ftx%2Fmarfa&query=Marfa,%20TX&page=0&mqId=282026127&index=0", target: "_blank" %>
+		  </div>
+		  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" align="center" id="font-weight-bold">
+		  	<%= link_to "#{t :map_bigbend_head}", "https://s3.amazonaws.com/nbcbigbend/MapMarfaRegion.jpg", target: "_blank" %>						  	
+		  </div>	
+		</div><br>
+		<div class="row">
+			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			  <ul class="nav nav-pills" id="marfaPills">
+			    <li class="nav-item"><a class="nav-link active" href="#marfaarea" aria-controls="marfaarea" data-toggle="pill"><%= "#{t :marfa_1}" %></a></li>
+			    <li class="nav-item"><a class="nav-link" href="#bigbend" aria-controls="bigbend" data-toggle="pill"><%= "#{t :marfa_2}" %></a></li>
+			    <li class="nav-item"><a class="nav-link" href="#desert" aria-controls="desert" data-toggle="pill"><%= "#{t :marfa_3}" %></a></li>
+			  </ul>
+			</div>
+    </div>
+		<div class="row">
+			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" align="justify">
+			  <div class="tab-content">
+			    <div class="tab-pane active" id="marfaarea">
+						<div class="row">
+						  <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+								<div class="video-container">
+									<iframe width="640" height="360" src="https://www.youtube.com/embed/FGMEhTeV3pM?rel=0" frameborder="0" allowfullscreen></iframe>
+								</div>
+						  </div>
+						  <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+								<div class="video-container">
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/H1Zvr3gvWkU?rel=0" frameborder="0" allowfullscreen></iframe>
+								</div>
+							</div>
+						</div>
+						<p class="marfa-padding"><%= "#{t :marfa_1a} #{t :marfa_1b} #{t :marfa_1c} #{t :marfa_1d}" %></p>
+						<p class="marfa-padding"><%= "#{t :marfa_1e} #{t :marfa_1f} #{t :marfa_1g} #{t :marfa_1h} #{t :marfa_1i} #{t :marfa_1j}" %></p>
+						<p class="marfa-padding"><%= "#{t :marfa_1k}" %></p>
+						<p class="marfa-padding"><%= "#{t :marfa_1l} #{t :marfa_1m} #{t :marfa_1n} #{t :marfa_1o} #{t :marfa_1p}" %></p>
+						<p class="marfa-padding"><%= "#{t :marfa_1q} #{t :marfa_1r} #{t :marfa_1s}" %></p>
+						<p class="font-weight-bold text-center marfa-padding"><%= "#{t :related_links}".upcase %></p>
+						<div class="row font-weight-bold">
+						  <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4" align="center"><%= link_to "#{t :related_link1} #{t :website_english}", "http://visitmarfa.com", target: "_blank" %></div>
+						  <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4" align="center"><%= link_to "#{t :related_link2} #{t :website_english}", "https://chinati.org", target: "_blank" %></div>
+						  <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4" align="center"><%= link_to "#{t :related_link3} #{t :website_english}", "http://juddfoundation.org", target: "_blank" %></div>
+						</div>
+			    </div>
+			    <div class="tab-pane" id="bigbend">
+						<div class="row">
+						  <div class="col-12 col-sm-6 offset-sm-3 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-6 offset-xl-3 ">
+								<div class="video-container">
+									<iframe width="640" height="360" src="https://www.youtube.com/embed/N0Yo3gNQliU?rel=0" frameborder="0" allowfullscreen></iframe>
+								</div>
+						  </div>
+						</div>
+						<p class="marfa-padding"><%= "#{t :marfa_2a} #{t :marfa_2b}" %></p>
+						<p class="marfa-padding"><%= "#{t :marfa_2c} #{t :marfa_2d}" %></p>
+						<p class="marfa-padding"><%= "#{t :marfa_2e}" %></p>
+						<p class="marfa-padding"><%= "#{t :marfa_2f} #{t :marfa_2g} #{t :marfa_2h} #{t :marfa_2i} #{t :marfa_2j}" %></p>
+						<p class="marfa-padding"><%= "#{t :marfa_2k} #{t :marfa_2l}" %></p>
+			    </div>
+			    <div class="tab-pane" id="desert"> 	
+						<div class="row">
+						  <div class="col-12 col-sm-6 offset-sm-3 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-6 offset-xl-3 ">
+								<div class="video-container">
+									<iframe width="640" height="360" src="https://www.youtube.com/embed/eaOCh8XN_TA?rel=0" frameborder="0" allowfullscreen></iframe>
+								</div>
+						  </div>
+						</div>
+						<p class="marfa-padding"><%= "#{t :the} ".capitalize %><span class="font-weight-bold"><%= "#{t :marfa_3a}" %></span><%= " #{t :marfa_3b} #{t :marfa_3c} #{t :marfa_3d}" %></p>
+						<p class="marfa-padding"><%= "#{t :marfa_3e}" %></p>
+						<p class="marfa-padding"><%= "#{t :marfa_3f} #{t :marfa_3g}" %></p>
+						<p class="marfa-padding"><%= "#{t :the} ".capitalize %><span class="font-weight-bold"><%= "#{t :marfa_3h}" %></span><%= "#{t :marfa_3i} #{t :marfa_3j} #{t :marfa_3k} #{t :marfa_3l}" %></p>
+						<p class="marfa-padding"><%= "#{t :marfa_3m} #{t :marfa_3n}" %></p>
+			    </div>
+			  </div>
+			</div>
+    </div>
+				
+  </div>
+</div>

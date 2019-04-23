@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /></head>
+  <body>
+    <p><%= @contact_form["name"] %>, the staff of The LightHouse Unlimited have received your refund request.</p>
+    <p><span style="font-weight: bold;">Location: </span><%= @contact_form["location"] %></p>
+		<% if @contact_form["phone"].present? %>
+			<p><span style="font-weight: bold;">Phone   : </span><%= @contact_form["phone"] %></p>
+		<% end %>
+		<% if @contact_form["ordernum"].present? %>
+			<p><span style="font-weight: bold;">Order # : </span><%= @contact_form["ordernum"] %></p>
+		<% end %>
+    <p style="font-weight: bold; font-style: italic;"><%= @contact_form["message"] %></p>
+    <p>We are saddened that you are not satisfied with your recent online purchase. Before we process your refund we would like to know if we can either rectify the situation or send you a replacement item.<br/></p>
+    <p>If you still want a refund we will issue one upon the return of the item that you no longer want. Our desire is for our customers to be 100% satisfied. Please mail the item back to:<br></p>
+    <p>The Lighthouse Unlimited<br>PO Box 252<br>Marfa, TX 79843<br></p>
+    <p>We hope that you will consider shopping with us again online or stop by our store if you travel to Marfa TX.</p>
+    <p>Sincerely,</p>
+    <p>The LightHouse Unlimited</p>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /></head>
+  <body>
+    <p><%= @contact_form["name"] %>, sus preguntas a continuación han sido recibidas por el personal de The LightHouse Unlimited.</p>
+    <p><span style="font-weight: bold;">Ubicación: </span><%= @contact_form["location"] %></p>
+		<% if @contact_form["phone"].present? %>
+			<p><span style="font-weight: bold;">Teléfono  : </span><%= @contact_form["phone"] %></p>
+		<% end %>
+		<% if @contact_form["ordernum"].present? %>
+			<p><span style="font-weight: bold;">Orden #   : </span><%= @contact_form["ordernum"] %></p>
+		<% end %>
+    <p style="font-weight: bold; font-style: italic;"><%= @contact_form["message"] %></p>
+    <p>Le agradecemos por tomarse el tiempo de contactarnos con sus preguntas. Haremos nuestro mejor esfuerzo para responder de manera oportuna durante nuestro horario comercial.<br/></p>
+    <p>Sinceramente,</p>
+    <p>The LightHouse Unlimited</p>
+  </body>
+</html>

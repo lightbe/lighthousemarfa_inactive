@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /></head>
+  <body>
+    <p><%= @contact_form["name"] %>, el personal de The LightHouse Unlimited ha recibido su solicitud de reembolso.</p>
+    <p><span style="font-weight: bold;">Ubicación: </span><%= @contact_form["location"] %></p>
+		<% if @contact_form["phone"].present? %>
+			<p><span style="font-weight: bold;">Teléfono  : </span><%= @contact_form["phone"] %></p>
+		<% end %>
+		<% if @contact_form["ordernum"].present? %>
+			<p><span style="font-weight: bold;">Orden #   : </span><%= @contact_form["ordernum"] %></p>
+		<% end %>
+    <p style="font-weight: bold; font-style: italic;"><%= @contact_form["message"] %></p>
+    <p>Nos entristece que no esté satisfecho con su reciente compra en línea. Antes de procesar su reembolso, nos gustaría saber si podemos rectificar la situación o enviarle un artículo de reemplazo.<br/></p>
+    <p>Si aún desea un reembolso, emitiremos una a la devolución del artículo que ya no desee. Nuestro deseo es que nuestros clientes estén 100% satisfechos. Por favor devuelva el artículo a:<br></p>
+    <p>The Lighthouse Unlimited<br>PO Box 252<br>Marfa, TX 79843<br></p>
+    <p>Esperamos que considere volver a comprar con nosotros en línea o visite nuestra tienda si viaja a Marfa TX.</p>
+    <p>Sinceramente,</p>
+    <p>The LightHouse Unlimited</p>
+  </body>
+</html>

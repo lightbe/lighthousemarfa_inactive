@@ -1,0 +1,99 @@
+<div id="contact" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2><%= "#{@page_title_view}" %></h2>
+      <hr>
+      <p><%= "#{t :contact_us_text}" %></p>
+    </div>
+		<div class="row">
+	    <div class="col-10 offset-1 col-sm-10 offset-sm-1 col-md-10 offset-sm-1 col-lg-10 offset-lg-1 col-xl-10 offset-xl-1">
+				<div class="row">
+		      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" align="center">
+		        <div class="contact-item"> 
+		          <p class="font-weight-bold"><%= render "pages/address_bookstore" %></p>
+		        </div>
+		      </div>
+	      </div>
+	     </div>
+		</div>
+		<div class="row">
+	    <div class="col-10 offset-1 col-sm-10 offset-sm-1 col-md-10 offset-sm-1 col-lg-10 offset-lg-1 col-xl-10 offset-xl-1">
+	      <h3><%= "#{t :contact_leave_msg}" %></h3>
+	      <%= form_tag contact_path, "data-toggle" => "validator", method: 'get' do %>
+					<div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+				 		<ul class="list-inline">
+			        <li class="list-inline-item radio-button-class"><%= check_radio_button("1") %><%= label_tag :purpose_feedback, "#{t :contact_feedback}" %></li> 
+			        <li class="list-inline-item radio-button-class"><%= check_radio_button("2") %><%= label_tag :purpose_question, "#{t :contact_question}" %></li>
+			        <li class="list-inline-item radio-button-class"><%= check_radio_button("3") %><%= label_tag :purpose_refund, "#{t :contact_refund}" %></li>
+			        <li class="list-inline-item radio-button-class"><%= check_radio_button("4") %><%= label_tag :purpose_bug, "#{t :contact_bug}" %></li>
+			      </ul>
+		  			<span class="text-orange font-weight-bold"><%= "#{t :note}" %>:</span><%=" #{t :contact01}" %>
+					</div>
+	        <div class="row">
+	          <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+							<div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 controls">
+			          <%= text_field_tag :name, params[:name], class: "form-control", minlength: 2, maxlength: 40, placeholder: "#{t :contact_placeholder_name}", required: "required", "data-html" => "false", "data-required-error" => "#{t :contact_error_required_name}", "data-pattern-error" => "#{t :contact_error_pattern_name}" %>
+			          <p class="help-block with-errors"></p>
+							</div>
+	          </div>
+	          <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+							<div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 controls">
+			          <%= email_field_tag :email, params[:email], class: "form-control", minlength: 10, maxlength: 70, placeholder: "#{t :contact_placeholder_email}", "data-html" => "false", "data-pattern-error" => "#{t :contact_error_pattern_email}", "data-pattern" => "^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" %>
+			          <p class="help-block with-errors"></p>
+							</div>
+	          </div>
+	        </div>
+	        <div class="row">
+	          <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+							<div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 controls">
+			          <%= text_field_tag :org, params[:org], class: "form-control", minlength: 5, maxlength: 40, placeholder: "#{t :contact_placeholder_org}" %>
+			          <p class="help-block with-errors"></p>
+							</div>
+	          </div>
+	          <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+							<div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 controls">
+			          <%= text_field_tag :location, params[:location], class: "form-control", minlength: 2, maxlength: 60, placeholder: "#{t :contact_placeholder_location}", "data-html" => "false", required: "required", "data-required-error" => "#{t :contact_error_required_location}", "data-pattern-error" => "#{t :contact_error_pattern_location}" %>
+			          <p class="help-block with-errors"></p>
+							</div>
+	          </div>
+	        </div>
+	        <div class="row">
+	          <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+							<div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 controls">
+			          <%= text_field_tag :phone, params[:org], class: "form-control", minlength: 10, maxlength: 20, placeholder: "#{t :contact_placeholder_phone}", required: "required", "data-html" => "false", "data-required-error" => "#{t :contact_error_required_phone}" %>
+			          <p class="help-block with-errors"></p>
+							</div>
+	          </div>
+	          <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+							<div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 controls">
+			          <%= text_field_tag :ordernum, params[:ordernum], class: "form-control", minlength: 5, maxlength: 10, placeholder: "#{t :contact_placeholder_ordernum}" %>
+			          <p class="help-block with-errors"></p>
+							</div>
+	          </div>
+	        </div>
+					<div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 controls">
+						<%= text_area_tag :message, params[:message], class: "form-control", minlength: 20, maxlength: 500, placeholder: "#{t :contact_placeholder_message}", required: "required", "data-html" => "false", "data-required-error" => "#{t :contact_error_required_message}", "data-emailurl-error" => "#{t :contact_error_pattern_message}" %>
+	          <p class="help-block with-errors"></p>
+					</div>
+					<div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+	      		<%= recaptcha_tags %>
+					</div>
+					<div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+	      		<p><%= "#{t :contact02}" %></p>
+						<%= submit_tag "#{t :contact_submit}", class: "btn btn-default" %>
+					</div>
+	      <% end %>
+	    </div>
+	  </div>
+		<div class="row">
+	    <div class="col-10 offset-1 col-sm-10 offset-sm-1 col-md-10 offset-sm-1 col-lg-10 offset-lg-1 col-xl-10 offset-xl-1">
+	      <div class="social">
+	        <h3><%= "#{t :follow_us}" %></h3>
+	        <ul>
+						<li><%= link_to "https://www.facebook.com/lighthouseunlimited/", target: "_blank" do %><i class="fab fa-facebook-f"></i><% end %></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </div>
+  </div>
+</div>

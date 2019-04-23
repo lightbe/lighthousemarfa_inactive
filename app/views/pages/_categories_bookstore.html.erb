@@ -1,0 +1,14 @@
+<li><%= "#{t :store_cat01}" %></li>
+<li><%= "#{t :store_cat02}" %></li>
+<li><%= "#{t :store_cat03}" %></li>
+<li><%= "#{t :store_cat04}" %></li>
+<li><%= "#{t :store_cat05}" %></li>
+<li><%= "#{t :store_cat06}" %></li>
+<li><%= "#{t :store_cat07}" %></li>
+<li><%= "#{t :store_cat08}" %></li>
+<% if params[:action] == "overview"%>
+	<li><%= "#{t :store_cat09}" %><br><%= "#{t :coming_soon}" %></li>
+<% else %>
+	<li><%= "#{t :store_cat09}" %> <%= "#{t :coming_soon}" %></li>
+<% end %>
+<li><%= "#{t :store_cat10}" %></li>

@@ -1,0 +1,36 @@
+<% if params[:action] == "overview" %>
+	<p class="font-weight-bold text-center"><%= "#{t :we_are_located_at}:" %></p><br>
+<% end %>
+
+<div class="row">
+	
+  <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+		<div class="address-bookstore">
+			<span class="i-spacing-right"><i class="fas fa-map-marker-alt"></i></span>
+			<span class="font-weight-bold"><%= link_to "#{t :address_bookstore}", "#{t :map_link_store}", target: "_blank" %></p></span>
+		</div>
+
+		<div class="address-bookstore">
+			<p class="font-weight-bold"><%= "#{t :bookstore_hours_head}" %></p>
+			<p><%= t('bookstore_hours_html') %></p>
+		</div>
+	</div>
+	
+  <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+		<div class="address-bookstore">
+		  <span class="i-spacing-right"><i class="far fa-envelope"></i></span>
+			<span class="font-weight-bold"><%= link_to "thelighthouseunlimited@gmail.com", "mailto:thelighthouseunlimited@gmail.com" %></span>
+		</div>
+
+		<div class="address-bookstore">
+			<span class="i-spacing-right"><i class="fas fa-phone"></i>
+				+1 432 729 2070
+		</div>
+
+		<div class="address-bookstore">
+			<span class="i-spacing-right"><i class="fas fa-wifi"></i></span><i class="fas fa-charging-station"></i>
+			<p class="font-weight-bold"><%= "#{t :bookstore_free}" %></p>
+		</div>
+	</div>
+	
+</div>
