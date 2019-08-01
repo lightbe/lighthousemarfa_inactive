@@ -1,3 +1,4 @@
+# encoding: utf-8
 class PagesController < ApplicationController
   
   def contact
@@ -6,25 +7,27 @@ class PagesController < ApplicationController
     
     regex_email = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/   
     regex_url   = /^(http|ftp|https)|[.][a-zA-Z][a-zA-Z]/
+    regex_message = /seo|captcha|sales|Б|Г|Д|ё|Ж|П|Ф|И|й|Л|Ц|Ш|Щ|Э|Ю|Я/i
+    regex_all     = /#{regex_email}|#{regex_url}|#{regex_message}/i
 		
     if params[:commit] == "#{t :contact_submit}"      
       case
-      when params[:name] =~ regex_email     || params[:name]     =~ regex_url
+      when params[:name] =~ regex_all
         flash.now[:danger] = "#{t :regex_error_name}"
         render :contact
-      when params[:org] =~ regex_email      || params[:org]      =~ regex_url
+      when params[:org] =~ regex_all
         flash.now[:danger] = "#{t :regex_error_org}"
         render :contact
-      when params[:location] =~ regex_email || params[:location] =~ regex_url
+      when params[:location] =~ regex_all
         flash.now[:danger] = "#{t :regex_error_location}"
         render :contact
-      when params[:phone] =~ regex_email    || params[:phone]    =~ regex_url
+      when params[:phone] =~ regex_all
         flash.now[:danger] = "#{t :regex_error_phone}"
         render :contact
-      when params[:ordernum] =~ regex_email || params[:ordernum] =~ regex_url
+      when params[:ordernum] =~ regex_all
         flash.now[:danger] = "#{t :regex_error_ordernum}"
         render :contact
-      when params[:message] =~ regex_email  || params[:message]  =~ regex_url
+      when params[:message] =~ regex_all
         flash.now[:danger] = "#{t :regex_error_msg}"
         render :contact
       when verify_recaptcha
