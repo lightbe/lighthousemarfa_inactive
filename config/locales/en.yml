@@ -13,7 +13,7 @@ en:
   contact01: "Please include an email address or phone number if you want a reply."
   contact02: "You will not be able to click the button to send your email until all required fields contain valid values."
   contact_bug: Defects/Bugs
-  contact_error_pattern_email: "Email format invalid. Enter a Valid Email Address from 10 to 70 characters."
+  contact_error_pattern_email: "Email format invalid. Enter a Valid Email Address from 6 to 70 characters."
   contact_error_pattern_location: "City, State/Prov cannot include emails addresses or URLs. Please remove them and try again."
   contact_error_pattern_message: "Message / Question cannot include emails addresses or URLs. Please remove them and try again."
   contact_error_pattern_name: "Name cannot include emails addresses or URLs. Please remove them and try again."

@@ -13,7 +13,7 @@ es:
   contact01: "Incluya una dirección de correo electrónico o un número de teléfono si desea recibir una respuesta."
   contact02: "No podrá hacer clic en el botón para enviar su correo electrónico hasta que todos los campos obligatorios contengan valores válidos."
   contact_bug: "Defectos / Errores"
-  contact_error_pattern_email: "El formato de correo electrónico no es válido. Introduzca una dirección de correo electrónico válida de 10 a 70 caracteres."
+  contact_error_pattern_email: "El formato de correo electrónico no es válido. Introduzca una dirección de correo electrónico válida de 6 a 70 caracteres."
   contact_error_pattern_location: "Ciudad, Estado / Prov no puede incluir direcciones de correo electrónico o URL. Por favor, retírelos y vuelva a intentarlo."
   contact_error_pattern_message: "Mensaje / Pregunta no puede incluir direcciones de correo electrónico o URL. Por favor, retírelos y vuelva a intentarlo."
   contact_error_pattern_name: "El nombre no puede incluir direcciones de correo electrónico o URL. Por favor, retírelos y vuelva a intentarlo."
