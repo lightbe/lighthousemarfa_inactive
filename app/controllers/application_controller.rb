@@ -5,6 +5,9 @@ class ApplicationController < ActionController::Base
 	before_action :set_mailer_host
   # before_action :before_action_proc
   # after_action :after_action_proc
+  
+  # include Recaptcha::ClientHelper
+  # include Recaptcha::Verify
 
   def default_url_options(options={}) 
     { :locale => I18n.locale }
