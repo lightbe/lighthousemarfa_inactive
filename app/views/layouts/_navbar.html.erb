@@ -1,13 +1,17 @@
 <!-- Navigation -->
 <nav class="navbar fixed-top navbar-expand-md navbar-custom">
   <div class="container-fluid">
-    <div class="navbar-header">
+    <!-- <div class="navbar-header">
       <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fas fa-bars"></i> </button>
 			<%= link_to " #{t :store_name}", locale_root_path, class: "navbar-brand" %>
-		</div>
-  
+		</div> -->
+
+ 	 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fas fa-bars"></i> </button>
+	 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-main-collapse">
+			
+			<%= link_to " #{t :store_name}", locale_root_path, class: "navbar-brand" %>
 
       <ul class="navbar-nav">
 				<li class="text-fb-link"><%= link_to "https://www.facebook.com/lighthouseunlimited/", target: "_blank" do %><i class="fab fa-facebook-f"></i><% end %></li>

@@ -16,7 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
-gem "bootstrap", "~> 4"
+gem "bootstrap", "~> 4.5.0"
 gem 'font-awesome-sass', '~> 5.9.0'
 gem "meta-tags"
 

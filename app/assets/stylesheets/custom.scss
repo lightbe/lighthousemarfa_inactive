@@ -163,7 +163,9 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .navbar-custom { padding: 0; border-bottom: 0; background: #000000; font-size: 110%; }
 .navbar-custom .navbar-brand { font-weight: bold; text-transform: capitalize; }
 .navbar-custom .navbar-brand:focus { outline: 0; }
-.navbar-custom .navbar-header { a { color: $linkColorNavbar; } a:hover, a:focus { text-decoration: none; color: $linkColorHover; } }
+.navbar-custom .navbar-brand { color: $linkColorNavbar; }
+.navbar-custom .navbar-brand:hover, .navbar-custom .navbar-brand:focus { text-decoration: none; color: $linkColorHover; }
+//.navbar-custom .navbar-header { a { color: $linkColorNavbar; } a:hover, a:focus { text-decoration: none; color: $linkColorHover; } }
 .navbar-custom .navbar-toggler { color: #eee; font-size: 110%; border-radius: 2px; padding: 0 4px; }
 .navbar-custom .navbar-toggler:hover, .navbar-custom .navbar-toggler:focus { background-color: #e75926; color: #ffffff; }
 .navbar-custom .navbar-brand .navbar-toggler:focus, .navbar-custom .navbar-brand .navbar-toggler:active { outline: 0; }
