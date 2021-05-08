@@ -25,7 +25,7 @@
       <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
       	<li class="hidden"> <a href="#page-top"></a> </li>
         <li class="nav-item nav-link"><%= link_to "#{t :link_overview}", overview_path %></li>
-        <li class="nav-item nav-link"><%= link_to "#{t :link_store}", "http://store.lighthousemarfa.com", target: "_blank" %></li>
+        <!-- <li class="nav-item nav-link"><%= link_to "#{t :link_store}", "http://store.lighthousemarfa.com", target: "_blank" %></li> -->
         <li class="nav-item nav-link"><%= link_to "#{t :link_contact}", contact_path %></li>
         <li class="nav-item nav-link"><%= link_to "#{t :link_marfa}", marfa_path %></li>
         <% if Rails.env.development? %><li class="nav-item nav-link"><%= link_to "#{t :link_testpage}", testpage_path %></li><% end %>
