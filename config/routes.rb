@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     get "contact"          => "pages#contact"
 	  get "marfa"            => "pages#marfa"
     get "overview"         => "pages#overview"
+    get "store"            => "pages#store"
     get "testpage"         => "pages#testpage"
     get "terms"            => "pages#terms"
     get "thanks"           => "pages#thanks"

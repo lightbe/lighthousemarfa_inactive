@@ -154,6 +154,11 @@ class PagesController < ApplicationController
     set_meta_tags site: "#{t :meta_site_overview}", title: "#{t :meta_title_overview}", description: "#{t :meta_desc_overview}", keywords: "#{t :meta_keywords_overview}"
   end
 
+  def store
+    @page_title_view = "#{t :page_title_store}"
+    set_meta_tags site: "#{t :meta_site_store}", title: "#{t :meta_title_store}", description: "#{t :meta_desc_store}", keywords: "#{t :meta_keywords_store}"
+  end
+
   def terms
     @page_title_view = "#{t :page_title_terms}"
     set_meta_tags title: "#{@page_title_view}"
