@@ -27,13 +27,14 @@ $textColorDarkBack: #ffffff;
 
 /* Bootstrap Responsive Font Sizes (rfs) variables */
 $enable-responsive-font-sizes: true;
-$rfs-base-font-size: 20px;
+$rfs-base-font-size: 18px;
 $rfs-breakpoint: 1920px;
 
 body, html, .container-fluid { width: 100% !important; height: 100% !important; background-color: $textColorWhiteBack; }
 body:after { position:fixed; height:100vh; top:0; left:0; right:0; z-index:-1; }
 body, html { 
-	font-size: 12px; font-family: Verdana, sans-serif; color: $textColorWhiteBack; text-rendering: optimizeLegibility !important;
+//	font-size: 12px; font-family: Verdana, sans-serif; color: $textColorWhiteBack; text-rendering: optimizeLegibility !important;
+	font-family: Verdana, sans-serif; color: $textColorWhiteBack; text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important; -moz-font-smoothing: antialiased !important; -ms-font-smoothing: antialiased !important; font-smoothing: antialiased !important;
 }
 //@media screen and (max-width: 768px) { body, html { font-size: 13px; } }
@@ -42,18 +43,17 @@ body, html {
 //@media screen and (min-width: 1800px) and (max-width: 2199px) { body, html { font-size: 18px; } }
 //@media screen and (min-width: 2200px) { body, html { font-size: 20px; } }
 @media screen and (max-width: $rfs-breakpoint) { 
-	
-	body, html { @include font-size(18px); }
-	.address-bookstore i, #contact i, #contact .social i { @include font-size(28px); }
-	.btn-default, #intro .blank-line, #intro .locale-line, #marfa .blank-line, .navbar-custom .navbar-toggler, #overview .text-under-construction { @include font-size(20px); }
-	.text-fb-link, .text-youtube-link { @include font-size(23px); }
-	.text-terms, #store .store-caption, { @include font-size(14px); }
-//	#store #my-categories-67807866 .horizontal-menu-container.horizontal-desktop .horizontal-menu-item>a span { @include font-size(16px); }
+
+	.address-bookstore i, #contact i, #contact .social i, h1 { @include font-size(28px); }
+	.btn-default, #intro .blank-line, #intro .locale-line, #marfa .blank-line, .navbar-custom, .navbar-custom .navbar-toggler, #overview .blank-line, #overview .text-under-construction,
+	.text-120, .text-fb-link, .text-youtube-link 
+		{ @include font-size(20px); }
+	.text-terms, #store .store-caption, ::placeholder { @include font-size(14px); }
+	#store #my-categories-67807866 { @include font-size(16px); }
 	.text-85, label { @include font-size(15px); }
-	.text-120 { @include font-size(21px); }
-	#contact h3 { @include font-size(26px); }
-	#contact .btn-default { @include font-size(19px); }
-	#contact .form-control { @include font-size(18px); }
+	h2 { @include font-size(26px); }
+	h3 { @include font-size(22px); }
+	#contact .btn-default, #contact .form-control { @include font-size(18px); }
 	#footer { @include font-size(16px); }
 	
 }
@@ -62,7 +62,6 @@ hr { height: 4px; width: 70px; text-align: center; position: relative; backgroun
 h1 { font-weight: bold; }
 h2, h3, h4 { color: $textColorWhiteBack; font-weight: bold; }
 h2 { margin: 0; }
-h3 { font-size: 114%; }
 
 ul, ol { list-style: none; padding: 0; -webkit-padding: 0; -khtml-padding: 0; -moz-padding: 0; -ms-padding: 0; -o-padding: 0; }
 
@@ -194,7 +193,8 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 #marfa .nav-pills .nav-link.active, .nav-pills .show>.nav-link { background-color: $linkColorHover; }
 
 /* Navigation */
-.navbar-custom { padding: 0; border-bottom: 0; background: #000000; font-size: 110%; }
+//.navbar-custom { padding: 0; border-bottom: 0; background: #000000; font-size: 110%; }
+.navbar-custom { padding: 0; border-bottom: 0; background: #000000; }
 .navbar-custom .navbar-brand { font-weight: bold; text-transform: capitalize; }
 .navbar-custom .navbar-brand:focus { outline: 0; }
 .navbar-custom .navbar-brand { color: $linkColorNavbar; }
@@ -218,7 +218,8 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 #overview { padding: 40px 0 20px 0; background: $backGrayColor; }
 #overview li { color: $textColorWhiteBack; font-weight: bold; }
 #overview p { margin-top: 5px; margin-bottom: 5px; color: $textColorWhiteBack; }
-#overview .blank-line { color: transparent; font-size: 115%; text-align: center; font-weight: bold; }
+//#overview .blank-line { color: transparent; font-size: 115%; text-align: center; font-weight: bold; }
+#overview .blank-line { color: transparent; text-align: center; font-weight: bold; }
 #overview .carousel { max-width: 600px; max-height: 450px; }
 #overview .nav-pills { font-weight: bold; padding-bottom: 5px; }
 #overview .nav-pills .nav-link.active, .nav-pills .show>.nav-link { background-color: $linkColorHover; }
