@@ -1,5 +1,5 @@
 {
   "name": "lighthousemarfa",
   "private": true,
-  "dependencies": {}
+  "packageManager": "yarn@1.22.17"
 }
