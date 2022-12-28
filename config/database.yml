@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: empty_devl
+  database: database_main_devl
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -80,5 +80,5 @@ test:
 #
 production:
   <<: *default
-  database: empty_prod
+  database: database_main_prod
   password: <%= ENV['DATABASE_URL'] %>
